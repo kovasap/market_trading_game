@@ -1,0 +1,9 @@
+name,tier,points,effects
+Wheat,T1,1,
+Bread,T2,3,
+Berries,T1,2,
+Water,T1,1,
+Metal,T1,2,
+Stone,T1,1,
+Wood,T1,1,
+Tools,T2,1,Doubles production of a T1 improvement
