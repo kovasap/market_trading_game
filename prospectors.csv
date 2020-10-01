@@ -1,6 +1,8 @@
-count,name,resource1,resource2,effects
-1,Farmer,Wheat,,
-1,Fisher,Fish,,
-1,Forager,Berries,,
-1,Jeweler,Gems,,
-1,Woodsman,Wood,,
+count ,name     ,action1                     ,action2                    ,action3                , 
+3     ,Farmer   ,Plant 5 RawFood in a Plains ,Build 1 Cottage            ,                       
+2     ,Forager  ,Plant 5 RawFood in a Forest ,Build 1 Cottage            ,Plant 1 RawLux in a Forest
+2     ,Jeweler  ,Plant 3 RawLux in a Mtn     ,Plant 3 RawMat in a Mtn    ,                       
+3     ,Woodsman ,Plant 6 RawMat in a Forest  ,,                       
+3     ,Miner    ,Plant 5 RawMat in a Mtn     ,Plant 3 RawMat in a Plains ,
+3     ,Builder  ,Build 1 Forge, Build 1 Kitchen,
+2     ,Architect,Build 1 Bakery, Build 1 Monastery,

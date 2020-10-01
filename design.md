@@ -33,17 +33,19 @@ F = field
 W = water
 ```
 
-Then all players draft 5 "prospector cards", which allow them to build T1 improvements
-over certain terrain types.  The prospectors may also have additional benefits they
-convey to the players over the course of the game.
+Then all players draft 5 "prospector cards", which allow them to discover T1
+resources over certain terrain types.  The prospectors may also have additional
+benefits they convey to the players over the course of the game.
 
-Prospector | T1 resources | Effect
----------- | ------------ | -----------
-Farmer     | Wheat | 
-Fisher     | Fish  |
-Forager    | Berries |
-Jeweler    | Gems |
-Woodsman   | Wood |
+Example prospector:
+
+```
+              Farmer    
+
+Actions:
+ - Place 4 Wheat on a plains - 
+ - Place 1 Berry on a forest -
+```
 
 
 ## Flow of Game
@@ -51,12 +53,12 @@ Woodsman   | Wood |
 Players do not have a "hand" of resources, all resources must be dynamically
 used from either your board or from the markets.
 
-At the start of your turn, each improvement is used once to create whatever resource it can.
-These improvement can happen in any order.
+At the start of your turn, remove up to one resource from each pile on your
+board.  These can be traded to markets as much as desired, and eventually used
+to buy up to one new worker card from the labor deck.
 
-Then, you can develop up to one (???) tile on your board with an
-improvement.  You can also trade your existing resources with market resources as
-much as you want, assuming you have places to put them.  
+Then, you can take up to one action from any of your owned prospector/worker
+cards.
 
 
 ## Markets
@@ -93,11 +95,8 @@ the last round of the game.
 
 Card | Tier | Location | Production | Cost to Build
 ---- | ---- | -------- | ---------- | ---------------
-Well | T1   | W        | -> Water | 1 Stone
-Farm | T1  | F        | -> <whatever was planted> | 1 of the resource the farm will produce
 Grindstone | T2  | F        | Wheat -> Flour | 1 Stone
 Bakery | T2  | F        | Wheat + Water -> Bread | 1 Wood
-Mine | T1  | M        | -> Salt | 1 Metal
 Workshop | T1  | F      | <improvement's cost> -> Any T2 improvement | 2 Wood
 Forge | T2 | F        | 1 Metal + 1 Wood -> 1 Tool | 3 Stone
 Lumberyard | T1 | F  | -> Wood | 1 Stone

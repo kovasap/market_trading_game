@@ -1,9 +1,10 @@
-count,name,tier,points,effects
-1,Wheat,T1,1,
-1,Bread,T2,3,
-1,Berries,T1,2,
-1,Water,T1,1,
-1,Metal,T1,2,
-1,Stone,T1,1,
-1,Wood,T1,1,
-1,Tools,T2,1,Doubles production of a T1 improvement
+count ,name     ,tier ,points ,effects                                             
+20    ,RawFood  ,T1   ,1      ,                                                    
+10    ,RefFood ,T2   ,3      ,                                                    
+5     ,PerfFood ,T3   ,5      ,                                                    
+10    ,RawLux   ,T2   ,2      ,                                                    
+5     ,RefLux   ,T2   ,5      ,                                                    
+5     ,PerfLux  ,T4   ,20      ,                                                    
+25    ,RawMat   ,T1   ,0      ,                                                    
+15    ,RefMat   ,T1   ,2      ,                                                    
+5     ,Tools    ,T2   ,1      ,Can harvest two of a resource a turn instead of one 
