@@ -28,8 +28,21 @@
     <exportHeight>0</exportHeight>
     <zoom>1.13</zoom>
   </Layout>
+  <Layout combineReferences="false" width="300" height="400" buffer="0" Name="people" defaultCount="1" dpi="300" drawBorder="true">
+    <Element name="name" type="Text" x="45" y="14" width="213" height="65" variable="@[name]" font="Arial;12;0;0;0;0" elementcolor="0x000000FF" bordercolor="0x000000FF" backgroundcolor="0x00000000" borderthickness="0" rotation="0" horizontalalign="1" verticalalign="1" lineheight="14" wordspace="0" opacity="255" enabled="true" outlinecolor="0x000000FF" outlinethickness="0" justifiedtext="false" autoscalefont="false" lockaspect="false" keeporiginalsize="false" tilesize="" />
+    <Element name="action1" type="Text" x="43" y="84" width="218" height="46" variable="@[action1]" font="Arial;12;0;0;0;0" elementcolor="0x000000FF" bordercolor="0x000000FF" backgroundcolor="0x00000000" borderthickness="0" rotation="0" horizontalalign="0" verticalalign="0" lineheight="14" wordspace="0" opacity="255" enabled="true" outlinecolor="0x000000FF" outlinethickness="0" justifiedtext="false" autoscalefont="false" lockaspect="false" keeporiginalsize="false" tilesize="" />
+    <Element name="action2" type="Text" x="43" y="135" width="217" height="46" variable="@[action2]" font="Arial;12;0;0;0;0" elementcolor="0x000000FF" bordercolor="0x000000FF" backgroundcolor="0x00000000" borderthickness="0" rotation="0" horizontalalign="0" verticalalign="0" lineheight="14" wordspace="0" opacity="255" enabled="true" outlinecolor="0x000000FF" outlinethickness="0" justifiedtext="false" autoscalefont="false" lockaspect="false" keeporiginalsize="false" tilesize="" />
+    <Element name="action3" type="Text" x="44" y="191" width="216" height="48" variable="@[action3]" font="Arial;12;0;0;0;0" elementcolor="0x000000FF" bordercolor="0x000000FF" backgroundcolor="0x00000000" borderthickness="0" rotation="0" horizontalalign="0" verticalalign="0" lineheight="14" wordspace="0" opacity="255" enabled="true" outlinecolor="0x000000FF" outlinethickness="0" justifiedtext="false" autoscalefont="false" lockaspect="false" keeporiginalsize="false" tilesize="" />
+    <Reference RelativePath="people.csv" Default="true" />
+    <exportRotation>0</exportRotation>
+    <exportTransparentBackground>false</exportTransparentBackground>
+    <exportPDFAsPageBack>false</exportPDFAsPageBack>
+    <exportWidth>0</exportWidth>
+    <exportHeight>0</exportHeight>
+    <zoom>1</zoom>
+  </Layout>
   <translatorName>Incept</translatorName>
-  <lastExportPath>/home/kovas/market-trading-game/</lastExportPath>
+  <lastExportPath>/home/kovas/market-trading-game/card_images</lastExportPath>
   <jsEscapeSingleQuotes>false</jsEscapeSingleQuotes>
   <jsTildeMeansCode>true</jsTildeMeansCode>
   <jsKeepFunctions>true</jsKeepFunctions>
