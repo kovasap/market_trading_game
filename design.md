@@ -33,35 +33,57 @@ F = field
 W = water
 ```
 
-Then all players draft 5 "prospector cards", which allow them to discover T1
-resources over certain terrain types.  The prospectors may also have additional
-benefits they convey to the players over the course of the game.
-
-Example prospector:
-
-```
-              Farmer    
-
-Actions:
- - Place 4 Wheat on a plains - 
- - Place 1 Berry on a forest -
-```
+Then all players select one "person" card from a selection of 5 random cards
+from the main deck.
 
 
 ## Flow of Game
 
 Players do not have a "hand" of resources, all resources must be dynamically
-used from either your board or from the markets.
+used from either your board or from the central/other players markets.
+
+All resources that are not used by a player during a turn get put into their
+personal market in front of them.
 
 At the start of your turn, remove up to one resource from each pile on your
-board.  These can be traded to markets as much as desired, and eventually used
-to buy up to one new worker card from the labor deck.
+board.  Then use buildings that convert raw resources to refined ones at most
+once, using the resources you just harvested, or those in other players
+markets.
 
-Then, you can take up to one action from any of your owned prospector/worker
-cards.
+Then, you can take up to one action.
+
+Each player has several "people" cards (you start with one).  These people have
+three action categories on them like so:
+
+Name    |
+------- |
+Forage  |
+Build   |
+Upgrade |
 
 
-## Markets
+## Personal Markets
+
+In front of every player is a personal market of surplus resources that
+accumulates.  All player markets are fair game for all players to use resources
+from over the course of the game.  At the beginning of each round all except
+the 3 newest resources in each players market are trashed.
+
+
+## National Projects
+
+A deck of national projects exists that contains goals that all players can
+work towards.  If a player completes a goal, then they get bonus points for
+that goal.  It could be that this is the main/only way to earn points in the
+whole game!  Card ideas:
+
+* Pay X food
+* War effort: pay X materials
+* Build X buildings in your province
+* Produce X of one type of resource per turn.
+
+
+## Central Markets (NOT CURRENTLY USED IDEA)
 
 The market contains resources laid out in a grid:
 
@@ -90,27 +112,3 @@ added.
 Winners are determined by whoever has the most valuable harvest at the end of
 the last round of the game.
 
-
-## Improvement Cards
-
-Card | Tier | Location | Production | Cost to Build
----- | ---- | -------- | ---------- | ---------------
-Grindstone | T2  | F        | Wheat -> Flour | 1 Stone
-Bakery | T2  | F        | Wheat + Water -> Bread | 1 Wood
-Workshop | T1  | F      | <improvement's cost> -> Any T2 improvement | 2 Wood
-Forge | T2 | F        | 1 Metal + 1 Wood -> 1 Tool | 3 Stone
-Lumberyard | T1 | F  | -> Wood | 1 Stone
-
-
-## Resource Cards
-
-Card      | Tier | Points | Bonus
---------  | ---- | ------ | -----
-Wheat     | T1   | 1      |
-Bread     | T2   | 3      |
-Berries   | T1   | 2      |
-Water     | T1   | 1      |
-Metal     | T1   | 2      |
-Stone     | T1   | 1      |
-Wood      | T1   | 1      |
-Tools     | T2   | 1      | Doubles production of a T1 improvement

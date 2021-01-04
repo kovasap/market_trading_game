@@ -1,8 +1,9 @@
-count ,name     ,action1                     ,action2                    ,action3                , 
-3     ,Farmer   ,Plant 5 RawFood in a Plains ,Build 1 Cottage            ,                       
-2     ,Forager  ,Plant 5 RawFood in a Forest ,Build 1 Cottage            ,Plant 1 RawLux in a Forest
-2     ,Jeweler  ,Plant 3 RawLux in a Mtn     ,Plant 3 RawMat in a Mtn    ,                       
-3     ,Woodsman ,Plant 6 RawMat in a Forest  ,,                       
-3     ,Miner    ,Plant 5 RawMat in a Mtn     ,Plant 3 RawMat in a Plains ,
-3     ,Builder  ,Build 1 Forge, Build 1 Kitchen,
-2     ,Architect,Build 1 Bakery, Build 1 Monastery,
+count ,cost      ,name      ,forage                      ,build                      ,upgrade                        , 
+2     ,3 RawFood ,Farmer    ,Plant 5 RawFood in a Plains ,Build 1 Cottage            ,Harvest ALL food from a Plains 
+2     ,2 RawFood ,Forager   ,Plant 5 RawFood in a Forest ,Build 1 Cottage            ,Plant 1 RawLux in a Forest     
+2     ,1 RefFood ,Jeweler   ,Plant 3 RawLux in a Mtn     ,Plant 3 RawMat in a Mtn    ,Build 1 Market
+2     ,3 RawFood ,Woodsman  ,Plant 6 RawMat in a Forest  ,Build 1 Refinery ,Build 1 Refinery
+2     ,2 RawFood ,Miner     ,Plant 5 RawMat in a Mtn     ,Plant 3 RawMat in a Plains ,
+2     ,4 RawFood ,Carpenter   ,Build 1 House               ,Build 1 Kitchen            ,Build 1 Refinery
+2     ,2 RefFood ,Architect ,Build 1 Bakery              ,Build 1 Monastery          ,Build 1 or 2 Houses
+2     ,1 RefFood ,Trader    ,Trade up to 2:2 for T1 resource,Trade 1:1 for T1+ resource,Build 1 Market
