@@ -1,4 +1,3 @@
-
 --[[ Lua code. See documentation: https://api.tabletopsimulator.com/ --]]
 
 -- https://github.com/tjakubo2/Decker/blob/master/Decker.ttslua
@@ -409,24 +408,29 @@ local sheetWidth = 10
 local sheetMaxHeight = 7
 function getSheetHeight(nCards)
   -- https://stackoverflow.com/questions/5525817/inline-conditions-in-lua-a-b-yes-no
-  local hasRemainder = nCards % sheetWidth and 1 or 0
-  print('rem ', hasRemainder)
-  return math.floor(nCards / sheetWidth) + hasRemainder
+  local extraRow
+  if (nCards % sheetWidth) == 0 then
+    extraRow = 0
+  else
+    extraRow = 1
+  end
+  -- print('rem ', hasRemainder, ' ncards ', nCards, ' width ', sheetWidth, ' mod ', nCards % sheetWidth)
+  return math.floor(nCards / sheetWidth) + extraRow
 end
 
 
 local decks = {}
 
-function makeDeckFromSheet(sheetName, cardBack)
+function makeDeckFromSheet(sheetName, cardBack, nCards)
   local cardFaces = baseURL .. 'card_images/' .. sheetName .. '?raw=true'
   print(cardFaces)
   local cardBack = baseURL .. 'card_images/' .. cardBack .. '?raw=true'
-  print('name ', name, ' numCards ', numCards)
-  print('width ', sheetWidth, ' height ', getSheetHeight(numCards))
+  print('name ', name, ' nCards ', nCards)
+  print('width ', sheetWidth, ' height ', getSheetHeight(nCards))
   local cardAsset = Decker.Asset(
-    cardFaces, cardBack, {width = sheetWidth, height = getSheetHeight(numCards)})
+    cardFaces, cardBack, {width = sheetWidth, height = getSheetHeight(nCards)})
   local cards = {}
-  for i = 1,numCards do
+  for i = 1,nCards do
     table.insert(cards, Decker.Card(
       cardAsset, math.floor(i / sheetWidth) + 1, i % sheetWidth + 1))
   end
@@ -451,10 +455,16 @@ function makeDeck(csv_request, name)
   numSheets = math.ceil(numCards / (sheetWidth * sheetMaxHeight))
   if numSheets > 1 then
     for i=0,numSheets-1 do
-      makeDeckFromSheet(name .. '_deck-' .. i .. '.png', name .. '_back.png')
+      if i == numSheets-1 then
+        makeDeckFromSheet(name .. '_deck-' .. i .. '.png', name .. '_back.png',
+                          numCards % (sheetWidth * sheetMaxHeight))
+      else
+        makeDeckFromSheet(name .. '_deck-' .. i .. '.png', name .. '_back.png',
+                          sheetWidth * sheetMaxHeight)
+      end
     end
   else
-    makeDeckFromSheet(name .. '_deck.png', name .. '_back.png')
+    makeDeckFromSheet(name .. '_deck.png', name .. '_back.png', numCards)
   end
 end
 
