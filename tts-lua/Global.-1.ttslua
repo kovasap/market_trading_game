@@ -1,3 +1,4 @@
+
 --[[ Lua code. See documentation: https://api.tabletopsimulator.com/ --]]
 
 -- https://github.com/tjakubo2/Decker/blob/master/Decker.ttslua
@@ -405,50 +406,76 @@ end
 local baseURL = 'https://github.com/kovasap/market_trading_game/blob/master/'
 
 local sheetWidth = 10
+local sheetMaxHeight = 7
 function getSheetHeight(nCards)
   -- https://stackoverflow.com/questions/5525817/inline-conditions-in-lua-a-b-yes-no
-  local hasRemainder = nCards % sheetWidth and 0 or 1
-  return nCards / sheetWidth + hasRemainder
+  local hasRemainder = nCards % sheetWidth and 1 or 0
+  print('rem ', hasRemainder)
+  return math.floor(nCards / sheetWidth) + hasRemainder
 end
 
 
 local decks = {}
 
-function makeDeck(csv_request, name)
-  curLines = 0
-  for s in request.text:gmatch("[^\r\n]+") do
-    curLines = curLines + 1
-  end
-  -- Ignore line with column headers.
-  local numCards = curLines - 1
-  -- define a new asset from face/back links, add width/height (since these default to 1x1)
-  local cardFaces = baseURL .. 'card_images/' .. name .. '_deck.png?raw=true'
-  local cardBack = baseURL .. 'card_images/' .. name .. '_back.png?raw=true'
+function makeDeckFromSheet(sheetName, cardBack)
+  local cardFaces = baseURL .. 'card_images/' .. sheetName .. '?raw=true'
+  print(cardFaces)
+  local cardBack = baseURL .. 'card_images/' .. cardBack .. '?raw=true'
+  print('name ', name, ' numCards ', numCards)
+  print('width ', sheetWidth, ' height ', getSheetHeight(numCards))
   local cardAsset = Decker.Asset(
     cardFaces, cardBack, {width = sheetWidth, height = getSheetHeight(numCards)})
   local cards = {}
   for i = 1,numCards do
-    table.insert(cards, Decker.Card(cardAsset, i / numCards, i % numCards))
+    table.insert(cards, Decker.Card(
+      cardAsset, math.floor(i / sheetWidth) + 1, i % sheetWidth + 1))
   end
   table.insert(decks, Decker.Deck(cards))
 end
 
-local deckNames = {'improvements', 'people', 'resources'}
-for _,name in pairs(deckNames) do
-  WebRequest.get(
-    baseURL .. name .. '.csv?raw=true',
-    function(req) makeDeck(req, name) end)
+function makeDeck(csv_request, name)
+  numCards = 0
+  local first_row = true
+  for s in csv_request.text:gmatch("[^\r\n]+") do
+    -- Ignore line with column headers.
+    if not first_row then
+      -- The first CSV column is the count.
+      for t in s:gmatch('[^,]+') do
+        numCards = numCards + tonumber(t)
+        break
+      end
+    else
+      first_row = false
+    end
+  end
+  numSheets = math.ceil(numCards / (sheetWidth * sheetMaxHeight))
+  if numSheets > 1 then
+    for i=0,numSheets-1 do
+      makeDeckFromSheet(name .. '_deck-' .. i .. '.png', name .. '_back.png')
+    end
+  else
+    makeDeckFromSheet(name .. '_deck.png', name .. '_back.png')
+  end
+end
+
+function loadDecks()
+  local deckNames = {'improvement', 'people', 'resource'}
+  for _,name in pairs(deckNames) do
+    WebRequest.get(
+      baseURL .. name .. '.csv?raw=true',
+      function(req) makeDeck(req, name) end)
+  end
+end
 
 -- so far, all of the above are just scripting definitions, nothing is spawned
 -- e.g. if I decided game is balanced better with just one cardTwo in the deck, I can just remove it
 --  from above code and leave rest of the code unchanged (still using myDeck below)
 -- same goes for changing art on cards (just replace links from Decker.Asset definitions)
 
--- let's do some testing when any chat message is sent
-function onChat()
+function spawnDecks()
     local xpos = 1
     for _,deck in pairs(decks) do
-      xpos = xpos + 1
+      xpos = xpos + 5
       deck:spawn({position = {xpos, 3, 0}})
     end
 
@@ -480,7 +507,10 @@ function advancedExample()
 end
 
 function onLoad()
-    broadcastToAll('Post any chat message to execute example code', {1, 1, 1})
+    -- broadcastToAll('Post any chat message to execute example code', {1, 1, 1})
+    loadDecks()
+    -- Make sure all decks are loaded before we try spawning them.
+    Wait.condition(spawnDecks, function() return next(decks) ~= nil end)
 end
 
 --[[ The onUpdate event is called once per frame. --]]
