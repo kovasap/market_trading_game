@@ -402,17 +402,7 @@ do
     end
 end
 
--- TODO find out how to get the WebRequest to return this value instead of using this global var.
-local curLines = 0
-function getNumCSVLines(request)
-  curLines = 0
-  for s in request.text:gmatch("[^\r\n]+") do
-    -- print(s)
-    -- print(curLines)
-    curLines = curLines + 1
-  end
-  print('done')
-end
+local baseURL = 'https://github.com/kovasap/market_trading_game/blob/master/'
 
 local sheetWidth = 10
 function getSheetHeight(nCards)
@@ -421,18 +411,19 @@ function getSheetHeight(nCards)
   return nCards / sheetWidth + hasRemainder
 end
 
-local baseURL = 'https://github.com/kovasap/market_trading_game/blob/master/'
-local deckNames = {'improvements', 'people', 'resources'}
+
 local decks = {}
-for _,name in pairs(deckNames) do
-  local cardFaces = baseURL .. 'card_images/' .. name .. '_deck.png?raw=true'
-  local cardBack = baseURL .. 'card_images/' .. name .. '_back.png?raw=true'
-  local ret = WebRequest.get(baseURL .. name .. '.csv?raw=true', getNumCSVLines)
-  print(curLines)
+
+function makeDeck(csv_request, name)
+  curLines = 0
+  for s in request.text:gmatch("[^\r\n]+") do
+    curLines = curLines + 1
+  end
   -- Ignore line with column headers.
   local numCards = curLines - 1
-
   -- define a new asset from face/back links, add width/height (since these default to 1x1)
+  local cardFaces = baseURL .. 'card_images/' .. name .. '_deck.png?raw=true'
+  local cardBack = baseURL .. 'card_images/' .. name .. '_back.png?raw=true'
   local cardAsset = Decker.Asset(
     cardFaces, cardBack, {width = sheetWidth, height = getSheetHeight(numCards)})
   local cards = {}
@@ -441,6 +432,12 @@ for _,name in pairs(deckNames) do
   end
   table.insert(decks, Decker.Deck(cards))
 end
+
+local deckNames = {'improvements', 'people', 'resources'}
+for _,name in pairs(deckNames) do
+  WebRequest.get(
+    baseURL .. name .. '.csv?raw=true',
+    function(req) makeDeck(req, name) end)
 
 -- so far, all of the above are just scripting definitions, nothing is spawned
 -- e.g. if I decided game is balanced better with just one cardTwo in the deck, I can just remove it
