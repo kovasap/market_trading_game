@@ -403,6 +403,9 @@ do
 end
 
 local baseURL = 'https://github.com/kovasap/market_trading_game/blob/master/'
+function makeURL(filename)
+  return baseURL .. filename .. '?raw=true'
+end
 
 local sheetWidth = 10
 local sheetMaxHeight = 7
@@ -414,7 +417,7 @@ function getSheetHeight(nCards)
   else
     extraRow = 1
   end
-  -- print('rem ', hasRemainder, ' ncards ', nCards, ' width ', sheetWidth, ' mod ', nCards % sheetWidth)
+  print('rem ', hasRemainder, ' ncards ', nCards, ' width ', sheetWidth, ' mod ', nCards % sheetWidth)
   return math.floor(nCards / sheetWidth) + extraRow
 end
 
@@ -422,10 +425,9 @@ end
 local decks = {}
 
 function makeDeckFromSheet(sheetName, cardBack, nCards)
-  local cardFaces = baseURL .. 'card_images/' .. sheetName .. '?raw=true'
+  local cardFaces = makeURL('card_images/' .. sheetName)
   print(cardFaces)
-  local cardBack = baseURL .. 'card_images/' .. cardBack .. '?raw=true'
-  print('name ', name, ' nCards ', nCards)
+  local cardBack = makeURL('card_images/' .. cardBack)
   print('width ', sheetWidth, ' height ', getSheetHeight(nCards))
   local cardAsset = Decker.Asset(
     cardFaces, cardBack, {width = sheetWidth, height = getSheetHeight(nCards)})
@@ -437,8 +439,49 @@ function makeDeckFromSheet(sheetName, cardBack, nCards)
   table.insert(decks, Decker.Deck(cards))
 end
 
-function makeDeck(csv_request, name)
-  numCards = 0
+function makeDeck(name, nCards)
+  print('name ', name, ' nc ', nCards)
+  local numSheets = math.ceil(nCards / (sheetWidth * sheetMaxHeight))
+  if numSheets > 1 then
+    for i=0,numSheets-1 do
+      if i == numSheets-1 then
+        makeDeckFromSheet(name .. '_deck-' .. i .. '.png', name .. '_back.png',
+                          nCards % (sheetWidth * sheetMaxHeight))
+      else
+        makeDeckFromSheet(name .. '_deck-' .. i .. '.png', name .. '_back.png',
+                          sheetWidth * sheetMaxHeight)
+      end
+    end
+  else
+    makeDeckFromSheet(name .. '_deck.png', name .. '_back.png', nCards)
+  end
+end
+
+function makeTokens(name, nCards)
+  for i=1,nCards do
+    local img = makeURL(name .. '-' .. tostring(i) .. '.png')
+    local bag = spawnObject({
+      type = "Infinite_Bag",
+      position = {x=0 + 2*i, y=20, z=0},
+      snap_to_grid = true,
+    })
+    local token = spawnObject({
+      type = "Custom_Token",
+      position = {x=0 + 2*i, y=25, z=0},
+      snap_to_grid = true,
+    })
+    token.setCustomObject({
+      image = img,
+      thickness = 0.1,
+      merge_distance = 15,
+      stackable = true,
+    })
+    bag.putObject(token)
+  end
+end
+
+function readCSV(csv_request, name, callbacks)
+  local numCards = 0
   local first_row = true
   for s in csv_request.text:gmatch("[^\r\n]+") do
     -- Ignore line with column headers.
@@ -452,28 +495,21 @@ function makeDeck(csv_request, name)
       first_row = false
     end
   end
-  numSheets = math.ceil(numCards / (sheetWidth * sheetMaxHeight))
-  if numSheets > 1 then
-    for i=0,numSheets-1 do
-      if i == numSheets-1 then
-        makeDeckFromSheet(name .. '_deck-' .. i .. '.png', name .. '_back.png',
-                          numCards % (sheetWidth * sheetMaxHeight))
-      else
-        makeDeckFromSheet(name .. '_deck-' .. i .. '.png', name .. '_back.png',
-                          sheetWidth * sheetMaxHeight)
-      end
-    end
-  else
-    makeDeckFromSheet(name .. '_deck.png', name .. '_back.png', numCards)
+  for _,cb in pairs(callbacks) do
+    cb(name, numCards)
   end
 end
 
 function loadDecks()
-  local deckNames = {'improvement', 'people', 'resource'}
-  for _,name in pairs(deckNames) do
+  local callbacksByDeckNames = {
+    improvement = {makeDeck},
+    people = {makeDeck},
+    resource = {makeTokens},
+  }
+  for name,callbacks in pairs(callbacksByDeckNames) do
     WebRequest.get(
       baseURL .. name .. '.csv?raw=true',
-      function(req) makeDeck(req, name) end)
+      function(req) readCSV(req, name, callbacks) end)
   end
 end
 
@@ -492,6 +528,7 @@ function spawnDecks()
     -- see below for a bit more functionality Decker offers
     -- advancedExample()
 end
+
 
 function advancedExample()
     -- all :spawn methods return a regular object - proceed like with anything
