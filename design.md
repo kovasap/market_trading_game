@@ -50,16 +50,17 @@ board.  Then use buildings that convert raw resources to refined ones at most
 once, using the resources you just harvested, or those in other players
 markets.
 
-Then, you can take up to one action.
-
-Each player has several "people" cards (you start with one).  These people have
-three action categories on them like so:
+Then, you can take up to one action.  Each player has several "people" cards
+(you start with the Governor card).  These people have three action categories
+on them like so:
 
 Name    |
 ------- |
 Forage  |
 Build   |
 Upgrade |
+
+You cannot take the action you took last round.
 
 
 ## Personal Markets
