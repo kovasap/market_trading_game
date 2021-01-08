@@ -1,9 +1,9 @@
-count ,cost      ,name      ,forage                      ,build                      ,upgrade                        , 
-2     ,3 RawFood ,Farmer    ,Plant 5 RawFood in a Plains ,Build 1 Cottage            ,Harvest ALL food from a Plains 
-2     ,2 RawFood ,Forager   ,Plant 5 RawFood in a Forest ,Build 1 Cottage            ,Plant 1 RawLux in a Forest     
-2     ,1 RefFood ,Jeweler   ,Plant 3 RawLux in a Mtn     ,Plant 3 RawMat in a Mtn    ,Build 1 Market
-2     ,3 RawFood ,Woodsman  ,Plant 6 RawMat in a Forest  ,Build 1 Refinery ,Build 1 Refinery
-2     ,2 RawFood ,Miner     ,Plant 5 RawMat in a Mtn     ,Plant 3 RawMat in a Plains ,
-2     ,4 RawFood ,Carpenter   ,Build 1 House               ,Build 1 Kitchen            ,Build 1 Refinery
-2     ,2 RefFood ,Architect ,Build 1 Bakery              ,Build 1 Monastery          ,Build 1 or 2 Houses
-2     ,1 RefFood ,Trader    ,Trade up to 2:2 for T1 resource,Trade 1:1 for T1+ resource,Build 1 Market
+count ,cost      ,name      ,forage                            ,build                                ,upgrade                                       , 
+2     ,3 RawFood ,Farmer    ,Plant 5 RawFood in a Plains       ,Build 1 Cottage for 3rM (2rF->1pF)   ,Harvest ALL food from a Plains                
+2     ,2 RawFood ,Forager   ,Plant 5 RawFood in a Forest       ,Build 1 Cottage for 2rM (2rF->1pF)   ,Plant 1 RawLux in a Forest                    
+2     ,1 ProFood ,Jeweler   ,Plant 3 RawLux in a Mtn           ,Plant 3 RawMat in a Mtn              ,Build 1 Market for 2pM (1any->1any same tier) 
+2     ,3 RawFood ,Woodsman  ,Plant 6 RawMat in a Forest        ,Build 1 Refinery for 4rM (1rM->1pM)  ,Build 1 Refinery for 3rM (1rM->1pM)           
+2     ,2 RawFood ,Miner     ,Plant 5 RawMat in a Mtn           ,Plant 3 RawMat in a Plains           ,                                              
+2     ,4 RawFood ,Carpenter ,Build 1 House for 2pM             ,Build 1 Kitchen (6rF->4pF)           ,Build 1 Refinery for 4rM (1rM->1pM)           
+2     ,2 ProFood ,Architect ,Build 1 Bakery for 4pM (2pF->1eF) ,Build 1 Monastery for 2pM (3rL->1pL) ,Build 1 or 2 Houses for 2pM each              
+2     ,1 ProFood ,Trader    ,Trade 2:2 for T1 resource         ,Trade 1:1 for T2+ resource           ,Build 1 Market for 1pM (1any->1any same tier) 
