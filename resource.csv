@@ -1,10 +1,9 @@
-count ,name     ,tier ,points ,effects                                             
-20    ,RawFood  ,T1   ,1      ,                                                    
-10    ,RefFood ,T2   ,3      ,                                                    
-5     ,PerfFood ,T3   ,5      ,                                                    
-10    ,RawLux   ,T2   ,2      ,                                                    
-5     ,RefLux   ,T2   ,5      ,                                                    
-5     ,PerfLux  ,T4   ,20      ,                                                    
-25    ,RawMat   ,T1   ,0      ,                                                    
-15    ,RefMat   ,T1   ,2      ,                                                    
-5     ,Tools    ,T2   ,1      ,Can harvest two of a resource a turn instead of one 
+count ,abbrev ,name               ,tier ,points ,effects 
+20    ,rF     ,Raw Food           ,T1   ,1      ,        
+10    ,pF     ,Processed Food     ,T2   ,3      ,        
+5     ,eF     ,Exceptional Food   ,T3   ,5      ,        
+10    ,rL     ,Raw Luxury         ,T2   ,2      ,        
+5     ,pL     ,Processed Luxury   ,T2   ,5      ,        
+5     ,eL     ,Exceptional Luxury ,T4   ,20     ,        
+25    ,rM     ,Raw Material       ,T1   ,0      ,        
+15    ,pM     ,Processed Material ,T2   ,2      ,        
