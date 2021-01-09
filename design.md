@@ -50,16 +50,17 @@ board.  Then use buildings that convert raw resources to refined ones at most
 once, using the resources you just harvested, or those in other players
 markets.
 
-Then, you can take up to one action.
-
-Each player has several "people" cards (you start with one).  These people have
-three action categories on them like so:
+Then, you can take up to one action.  Each player has several "people" cards
+(you start with the Governor card).  These people have three action categories
+on them like so:
 
 Name    |
 ------- |
 Forage  |
 Build   |
 Upgrade |
+
+You cannot take the action you took last round.
 
 
 ## Personal Markets
@@ -110,5 +111,17 @@ added.
 ## How to Win
 
 Winners are determined by whoever has the most valuable harvest at the end of
-the last round of the game.
+the last round of the game.  Or maybe the most points from national projects.
+Or a combination.
+
+
+## Visual Design
+
+### Tokens
+
+As a type of resource goes up in quality, its token could be more refined
+looking.  For instance, for luxuries, the raw version could be a roughly cut
+gemstone (like in ascension for honor tokens), then the exceptional version
+could be finely cut like a ruby/diamond.  The color/general shape would be
+preserved to make the tokens easily understandable as from the same category.
 
