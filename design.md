@@ -3,11 +3,9 @@ bookShowToc: false
 draft: true
 ---
 
-TODO trying using http://playingcards.io/ for this.
-
 # Market Trading
 
-## Core ideas
+## Core ideas and inspirations
 
 Euro-style board game where each player is (relatively) independently creating
 their own nations/economies.  Interaction between players comes from what each
@@ -19,8 +17,12 @@ complementary resources.
 
 ## Setting up
 
-Each player takes an agricola-style random game board with a grid of different
-terrain types.  For example:
+The improvements, projects, and people decks are shuffled, and 4, 3, and 4
+cards respectively are flipped up next to them as options for players to buy as
+the game progresses.  These cards are refreshed as they are bought.
+
+Then each player takes an agricola-style random game board with a grid of
+different terrain types.  For example:
 
 ```
 F F F F F F
@@ -33,8 +35,8 @@ F = field
 W = water
 ```
 
-Then all players select one "person" card from a selection of 5 random cards
-from the main deck.
+Then all players select one "governor" card as their starting person.
+
 
 
 ## Flow of Game
@@ -60,23 +62,23 @@ Forage  |
 Build   |
 Upgrade |
 
-You cannot take the action you took last round.
+You cannot take the action you took last round.  When taking an action, you
+MUST do every effect from every people card that you have, but you can do them
+in any order.
 
 
 ## Personal Markets
 
 In front of every player is a personal market of surplus resources that
-accumulates.  All player markets are fair game for all players to use resources
-from over the course of the game.  At the beginning of each round all except
-the 3 newest resources in each players market are trashed.
+accumulates.  Any player can trade resources 1:1 between markets at any time,
+provided the resources are of the same tier.
 
 
 ## National Projects
 
 A deck of national projects exists that contains goals that all players can
 work towards.  If a player completes a goal, then they get bonus points for
-that goal.  It could be that this is the main/only way to earn points in the
-whole game!  Card ideas:
+that goal.  Card example ideas:
 
 * Pay X food
 * War effort: pay X materials
@@ -84,7 +86,26 @@ whole game!  Card ideas:
 * Produce X of one type of resource per turn.
 
 
-## Central Markets (NOT CURRENTLY USED IDEA)
+## How to Win
+
+Winners are determined by whoever has the most points from national projects,
+improvements, and point tokens.
+
+
+## Visual Design
+
+### Tokens
+
+As a type of resource goes up in quality, its token could be more refined
+looking.  For instance, for luxuries, the raw version could be a roughly cut
+gemstone (like in ascension for honor tokens), then the exceptional version
+could be finely cut like a ruby/diamond.  The color/general shape would be
+preserved to make the tokens easily understandable as from the same category.
+
+
+## UNUSED IDEAS
+
+### Central Markets
 
 The market contains resources laid out in a grid:
 
@@ -107,21 +128,8 @@ At the end of each round of play, for each row, one resource from the largest
 stack is trashed, and a new random resource from each deck is revealed and
 added.
 
-
-## How to Win
+### Winning
 
 Winners are determined by whoever has the most valuable harvest at the end of
-the last round of the game.  Or maybe the most points from national projects.
-Or a combination.
-
-
-## Visual Design
-
-### Tokens
-
-As a type of resource goes up in quality, its token could be more refined
-looking.  For instance, for luxuries, the raw version could be a roughly cut
-gemstone (like in ascension for honor tokens), then the exceptional version
-could be finely cut like a ruby/diamond.  The color/general shape would be
-preserved to make the tokens easily understandable as from the same category.
+the last round of the game.  
 

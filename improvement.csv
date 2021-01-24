@@ -1,9 +1,13 @@
-count ,name      ,bonus_points ,location ,production                    ,effect                   ,build_cost          
-3     ,Kitchen   ,2            ,Field    ,6 RawFood -> 4 ProFood        ,                         ,varies 
-3     ,Bakery    ,2            ,Field    ,2 ProFood -> 1 PerfFood       ,                         ,varies 
-3     ,Refinery  ,1            ,Field    ,1 RawMat -> 1 ProMat          ,                         ,varies 
-3     ,Forge     ,2            ,Field    ,1 ProMat + 1 RawMat -> 1 Tool ,                         ,varies 
-5     ,Cottage   ,1            ,Field    ,2 RawFood -> 1 ProFood        ,                         ,varies 
-2     ,Monastery ,0            ,Mtn      ,3 RawLux -> 1 ProLux          ,                         ,varies 
-4     ,Market    ,0            ,Anywhere ,1 Any -> 1 Any                ,                         ,varies 
-8     ,House     ,0            ,Anywhere ,                              ,Allows additional person ,varies 
+count ,name               ,bonus_points ,location     ,production                    ,effect ,build_cost                     
+3     ,Kitchen            ,2            ,Field        ,6 RawFood -> 4 ProFood        ,       ,4 RawMat                       
+3     ,Bakery             ,2            ,Field        ,2 ProFood -> 1 PerfFood       ,       ,4 RawMat + 2 ProMat            
+3     ,Refinery           ,1            ,Field        ,1 RawMat -> 1 ProMat          ,       ,3 RawMat                       
+3     ,Forge              ,2            ,Field        ,1 ProMat + 1 RawMat -> 1 Tool ,       ,3 ProMat                       
+5     ,Cottage            ,1            ,Field        ,2 RawFood -> 1 ProFood        ,       ,2 RawMat                       
+2     ,Monastery          ,0            ,Mtn          ,3 RawLux -> 1 ProLux          ,       ,7 RawMat                       
+4     ,Flee Market        ,0            ,Anywhere     ,1 Any -> 1 Any (from bank)    ,       ,2 RawMat + 1 RawLux            
+3     ,Foreign Aid Office ,0            ,Anywhere     ,4 RawFood -> 1 Point          ,       ,2 ProMat + 1 RawLux            
+3     ,Monument           ,10           ,Field or Mtn ,                              ,       ,4 RawMat + 6 ProMat + 1 ProLux 
+3     ,Fishery            ,0            ,Water        ,2 RawMat -> 4 RawFood         ,       ,4 RawMat + 1 ProMat            
+3     ,Manufactory        ,3            ,Field        ,2 ProMat -> 1 Point           ,       ,4 RawMat + 4 ProMat            
+      
