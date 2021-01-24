@@ -1,10 +1,10 @@
-count ,cost      ,name      ,forage                            ,build                                ,upgrade                                       , 
-4     ,Start     ,Governor  ,Complete 1 project                ,Build 1 House for 8rM                ,Recruit 1 new person                          
-2     ,3 RawFood ,Farmer    ,Plant 5 RawFood in a Plains       ,Build 1 Cottage for 2rM (2rF->1pF)   ,Harvest ALL food from a Plains                
-2     ,2 RawFood ,Forager   ,Plant 5 RawFood in a Forest       ,Build 1 Cottage for 2rM (2rF->1pF)   ,Plant 1 RawLux in a Forest                    
-2     ,1 ProFood ,Jeweler   ,Plant 3 RawLux in a Mtn           ,Plant 3 RawMat in a Mtn              ,Build 1 Market for 2pM (1any->1any same tier) 
-2     ,3 RawFood ,Woodsman  ,Plant 6 RawMat in a Forest        ,Complete 1 project                   ,Build 1 Refinery for 3rM (1rM->1pM)           
-2     ,2 RawFood ,Miner     ,Plant 5 RawMat in a Mtn           ,Plant 3 RawMat in a Plains           ,                                              
-2     ,4 RawFood ,Carpenter ,Build 1 House for 2pM             ,Build 1 Kitchen (6rF->4pF)           ,Complete 1 project                            
-2     ,2 ProFood ,Architect ,Build 1 Bakery for 4pM (2pF->1eF) ,Build 1 Monastery for 2pM (3rL->1pL) ,Build 1 or 2 Houses for 2pM each              
-2     ,1 ProFood ,Trader    ,Trade 2:2 for T1 resource         ,Trade 1:1 for T2+ resource           ,Build 1 Market for 1pM (1any->1any same tier) 
+count ,cost      ,name      ,forage                                            ,build                                    ,upgrade                                                  
+4     ,Start     ,Governor  ,Plant 2 RawFood in Plains or 2 RawMat in a Mtn    ,Complete 1 Project                       ,Recruit 1 new person                                     
+2     ,3 RawFood ,Farmer    ,Plant 4 RawFood in Plains                         ,Cook: turn 2 RawFood into 1 ProFood      ,Harvest ALL food from a Plains                           
+2     ,2 RawFood ,Forager   ,Double the RawFood placed on each tile this turn  ,Cook: turn 2 RawFood into 1 ProFood      ,Plant 1 RawLux in a Forest with no adjacent developments 
+2     ,1 ProFood ,Jeweler   ,Plant RawLux instead of RawMat this turn          ,Refine: turn 4 RawMat into 1 RawLux      ,----                                                     
+2     ,3 RawFood ,Woodsman  ,You can plant RawMat in forests and plant 1 extra ,Complete 1 project                       ,Turn up to 3 RawFood into RawMats                        
+2     ,2 RawFood ,Miner     ,Plant 2 RawMat on two Mtns                        ,Pay one RawMat!                          ,----                                                     
+2     ,4 RawFood ,Carpenter ,Draw 3 improvements and build 1 - discard others  ,Build 1 improvement                      ,Complete 1 project                                       
+2     ,2 ProFood ,Architect ,Draw 5 improvements and build 1 - discard others  ,Build 1 RawMat improvement for half cost ,Build 2 improvements                                     
+2     ,1 ProFood ,Trader    ,Trade 2:2 for T1 resource                         ,Trade 1:1 for T2+ resource               ,Build 1 Market for 1pM (1any->1any same tier)            
