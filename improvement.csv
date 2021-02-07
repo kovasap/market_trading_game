@@ -1,13 +1,15 @@
-count ,name               ,bonus_points ,location     ,production                    ,effect ,build_cost                     
-3     ,Kitchen            ,2            ,Field        ,6 RawFood -> 4 ProFood        ,       ,4 RawMat                       
-3     ,Bakery             ,2            ,Field        ,2 ProFood -> 1 PerfFood       ,       ,4 RawMat + 2 ProMat            
-3     ,Refinery           ,1            ,Field        ,1 RawMat -> 1 ProMat          ,       ,3 RawMat                       
-3     ,Forge              ,2            ,Field        ,1 ProMat + 1 RawMat -> 1 Tool ,       ,3 ProMat                       
-5     ,Cottage            ,1            ,Field        ,2 RawFood -> 1 ProFood        ,       ,2 RawMat                       
-2     ,Monastery          ,0            ,Mtn          ,3 RawLux -> 1 ProLux          ,       ,7 RawMat                       
-4     ,Flee Market        ,0            ,Anywhere     ,1 Any -> 1 Any (from bank)    ,       ,2 RawMat + 1 RawLux            
-3     ,Foreign Aid Office ,0            ,Anywhere     ,4 RawFood -> 1 Point          ,       ,2 ProMat + 1 RawLux            
-3     ,Monument           ,10           ,Field or Mtn ,                              ,       ,4 RawMat + 6 ProMat + 1 ProLux 
-3     ,Fishery            ,0            ,Water        ,2 RawMat -> 4 RawFood         ,       ,4 RawMat + 1 ProMat            
-3     ,Manufactory        ,3            ,Field        ,2 ProMat -> 1 Point           ,       ,4 RawMat + 4 ProMat            
+count ,name               ,bonus_points ,location     ,production                               ,effect                           ,build_cost        
+3     ,Kitchen            ,2            ,Field        ,1 F -> 1 Fi or 1 Br + 1 S + 1 Fi -> 1 Fe ,                                 ,1 W               
+3     ,Bakery             ,2            ,Field        ,1 G -> 1 Br                              ,                                 ,2 S               
+3     ,Refinery           ,2            ,Field or Mtn ,1 W + 1 S -> 1 Me                        ,                                 ,3 S               
+3     ,Forge              ,2            ,Field or Mtn ,1 Me -> 1 Ir or 1 Me -> 1 Sc             ,                                 ,4 S               
+2     ,Monastery          ,0            ,Mtn          ,2 G/F -> 1 Bo                            ,                                 ,8 S               
+4     ,Flee Market        ,0            ,Anywhere     ,1 Any -> 1 Any (from bank)               ,Must be same tier                ,2 W               
+3     ,Foreign Aid Office ,0            ,Anywhere     ,                                         ,Convert G or F to points anytime ,2 S + 2 W         
+3     ,Monument           ,10           ,Field or Mtn ,                                         ,                                 ,6 S + 3 Sc + 1 Me 
+3     ,Fishery            ,0            ,Water        ,                                         ,Double all F production          ,2 W               
+3     ,Manufactory        ,3            ,Field        ,2 W -> 1 Fu or 2 S -> 1 Sc               ,                                 ,2 Me              
+3     ,Laboratory         ,3            ,Field        ,2 S + 1 Ge -> 1 Bo                       ,                                 ,4 W               
+3     ,Goldsmith          ,3            ,Field        ,1 Ge -> 1 Je or 1 Pe -> 1 Je             ,                                 ,4 W               
+3     ,Fish Pools         ,3            ,Field        ,1 S -> 1 F                               ,                                 ,2 S               
       

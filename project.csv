@@ -1,7 +1,7 @@
-count ,name                 ,points ,cost             ,effect                                                                      
-1     ,Kings Crown          ,10     ,2 eL             ,                                                                            
-2     ,Interstate Roadways  ,4      ,8 rM             ,The top 5 resources from each trade pile are kept every round instead of 3. 
-2     ,Feast Day            ,6      ,6 rF 4 pF + 1 eF ,One person card of your choice does nothing during the next round.          
-2     ,Diplomatic Gift      ,4      ,2 pL + 4 pF      ,Trade gives one bonus resource for the next round.                          
-2     ,Disaster Relief      ,4      ,10 rF            ,                                                                            
-2     ,Commemorative Statue ,7      ,10 pM            ,                                                                            
+count ,name                ,points ,cost               ,effect                                                             
+1     ,Kings Crown         ,20     ,4 Ge + 1 Me + 1 Pe ,                                                                   
+2     ,Interstate Roadways ,10     ,8 S                ,People can trade with anyone on the table - not just neighbors     
+2     ,Feast Day           ,10     ,3 Fe               ,One person card of your choice does nothing during the next round. 
+2     ,Diplomatic Gift     ,10     ,2 Fi + 2 Pe/Je     ,Trade gives one bonus resource for the next round.                 
+2     ,Disaster Relief     ,15     ,10 G               ,                                                                   
+2     ,Art Exhibition      ,20     ,5 Sc               ,                                                                   

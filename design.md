@@ -71,20 +71,16 @@ in any order.
 
 In front of every player is a personal market of surplus resources that
 accumulates.  Any player can trade resources 1:1 between markets at any time,
-provided the resources are of the same tier.
+provided the resources are of the same tier.  Once this personal market is full
+(> 5 items), the extra items are given to the bank and converted to points.
 
 
 ## National Projects
 
 A deck of national projects exists that contains goals that all players can
-work towards.  If a player completes a goal, then they get bonus points for
-that goal.  Card example ideas:
-
-* Pay X food
-* War effort: pay X materials
-* Build X buildings in your province
-* Produce X of one type of resource per turn.
-
+work towards.  The first player to complete each goal gets bonus points for
+that goal.  All 6 goals that are available throughout the game are revealed at
+the beginning.  
 
 ## How to Win
 
