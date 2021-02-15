@@ -12,4 +12,3 @@ count ,name               ,bonus_points ,location     ,production               
 3     ,Laboratory         ,3            ,Field        ,2 S + 1 Ge -> 1 Bo                       ,                                 ,4 W               
 3     ,Goldsmith          ,3            ,Field        ,1 Ge -> 1 Je or 1 Pe -> 1 Je             ,                                 ,4 W               
 3     ,Fish Pools         ,3            ,Field        ,1 S -> 1 F                               ,                                 ,2 S               
-      
