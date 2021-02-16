@@ -458,17 +458,22 @@ function makeDeck(name, nCards)
 end
 
 function makeTokens(name, nCards)
-  for i=1,nCards do
-    local img = makeURL('card_images/' .. name .. '_' .. tostring(i) .. '.png')
+  local perColumn = 8
+  for i=0,nCards do
+    if i == nCards then
+      break
+    end
+    local img = makeURL('card_images/' .. name .. '_' .. string.format("%02d", i+1) .. '.png')
     local bag = spawnObject({
       type = "Infinite_Bag",
-      position = {x=0 + 2*i, y=10, z=15},
+      position = {x=-3 + 5*math.floor(i/perColumn), y=5, z=-15+2*(i%perColumn)},
       snap_to_grid = true,
     })
     local token = spawnObject({
       type = "Custom_Token",
       position = {x=0 + 2*i, y=25, z=0},
       scale = {x=0.15, y=0.15, z=0.15},
+      rotation = {x=0,y=180,z=0},
       snap_to_grid = true,
     })
     token.setCustomObject({
@@ -521,29 +526,29 @@ end
 -- same goes for changing art on cards (just replace links from Decker.Asset definitions)
 
 function spawnDecks()
-    local xpos = -18
-    for _,name in pairs({'improvement', 'project', 'people'}) do
+    local xpos = -25
+    local zpos = 12
+    for name,cardsToFlip in pairs({improvement = 6, people = 4}) do
       deck = decks[name]
-      xpos = xpos + 4
-      position = {x=xpos, y=0, z=14}
+      zpos = zpos - 4
       local deckObj = deck:spawn({
-        position = position,
+        position = {x=xpos, y=0, z=zpos},
         rotation = {x=0, y=180, z=180},
       })
-      if name == 'people' then
-        for i=1,4 do
-          Wait.frames(function()
-            deckObj.takeObject({
-              position = {x=xpos + 3*i, y=position.y, z=position.z - 5},
-              smooth = true,
-              flip = true,
-              -- callback_function = function(card)
-              --    card.setPositionSmooth({x=position.x, y=position.y, z=position.z - 5})
-              --    card.setRotationSmooth({x=180, y=0, z=180})
-              --   end
-            })
-          end, 5)
-        end
+      print(deckObj)
+      for i=1,cardsToFlip do
+        Wait.frames(function()
+          local deckPos = deckObj.getPosition()
+          deckObj.takeObject({
+            position = {x=deckPos.x + 3.5*i, y=deckPos.y, z=deckPos.z},
+            smooth = true,
+            flip = true,
+            -- callback_function = function(card)
+            --    card.setPositionSmooth({x=position.x, y=position.y, z=position.z - 5})
+            --    card.setRotationSmooth({x=180, y=0, z=180})
+            --   end
+          })
+        end, 5)
       end
     end
 

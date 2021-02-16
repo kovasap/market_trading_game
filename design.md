@@ -17,9 +17,9 @@ complementary resources.
 
 ## Setting up
 
-The improvements, projects, and people decks are shuffled, and 4, 3, and 4
-cards respectively are flipped up next to them as options for players to buy as
-the game progresses.  These cards are refreshed as they are bought.
+The improvements and people decks are shuffled, and 6 and 4 cards respectively
+are flipped up next to them as options for players to buy as the game
+progresses.  These cards are refreshed as they are bought.
 
 Then each player takes an agricola-style random game board with a grid of
 different terrain types.  For example:
@@ -35,26 +35,41 @@ F = field
 W = water
 ```
 
-Then all players select one "governor" card as their starting person.
+Then all players select one "governor" card as their starting person and place
+it on a tile on their board.
+
+All players also take a point token bowl containing 30 tokens that they will
+empty over the course of the game.  The player who empties their bowl first
+wins!
 
 
+## On your turn...
 
-## Flow of Game
+### 1. Harvest Phase
 
-Players do not have a "hand" of resources, all resources must be dynamically
-used from either your board or from the central/other players markets.
+Remove one resource from each pile on your board and put it to the side.
 
-All resources that are not used by a player during a turn get put into their
-personal market in front of them.
+### 2. Trading and Processing Phase
 
-At the start of your turn, remove up to one resource from each pile on your
-board.  Then use buildings that convert raw resources to refined ones at most
-once, using the resources you just harvested, or those in other players
-markets.
+Using the resources you harvested, either convert them to new resources using
+each of your improvements at least once, or trade them to the central market.
+You can trade and/or improve in any order, potentially even improving those
+resources that you traded for!
 
-Then, you can take up to one action.  Each player has several "people" cards
-(you start with the Governor card).  These people have three action categories
-on them like so:
+Trading follows these rules:
+
+1. The total point number of resources you take in a trade must be less than or
+   equal to the total point number of resources you give.
+1. If **zero** of a resource is in the market, its value is **doubled**.  This
+   applied when giving the first resource to the market and taking the last
+   resource.
+1. A resource can only ever have up to **four** copies in the market.  If there
+   exist four copies, the market is **flooded** and cannot accept any more.
+
+### 3. Action Phase
+
+Each player has one or more "people" cards (you start with the Governor card).
+These people have three action types on them like so:
 
 Name    |
 ------- |
@@ -62,70 +77,28 @@ Forage  |
 Build   |
 Upgrade |
 
-You cannot take the action you took last round.  When taking an action, you
-MUST do every effect from every people card that you have, but you can do them
-in any order.
+You declare which action you will take and do what each card says under that
+action type.  When taking an action, you MUST do every effect from every people
+card that you have, but you can do them in any order.
+
+When actions tell you to buy improvements or people, you pay the cost to the
+bank (not the market!) and place your new person or improvement onto your map,
+taking up a tile.
+
+### 4. Donation Phase
+
+Any resources you did not use during your turn are given to the central
+market.  In exchange, you take tokens from your point bowl and place them next
+to the resources in question according to the market value of those resources.
+
+For example, say you have two extra grain at the end of your turn, and there is
+no grain in the market currently.  Since grain is worth one point, you would
+earn `2 * 1 = 2` points for the first grain (since its value is doubled), and
+one point for the second, for three total points.  You would represent this by
+taking three of your point tokens and placing them by the grain market.
 
 
-## Personal Markets
+## Game End
 
-In front of every player is a personal market of surplus resources that
-accumulates.  Any player can trade resources 1:1 between markets at any time,
-provided the resources are of the same tier.  Once this personal market is full
-(> 5 items), the extra items are given to the bank and converted to points.
-
-
-## National Projects
-
-A deck of national projects exists that contains goals that all players can
-work towards.  The first player to complete each goal gets bonus points for
-that goal.  All 6 goals that are available throughout the game are revealed at
-the beginning.  
-
-## How to Win
-
-Winners are determined by whoever has the most points from national projects,
-improvements, and point tokens.
-
-
-## Visual Design
-
-### Tokens
-
-As a type of resource goes up in quality, its token could be more refined
-looking.  For instance, for luxuries, the raw version could be a roughly cut
-gemstone (like in ascension for honor tokens), then the exceptional version
-could be finely cut like a ruby/diamond.  The color/general shape would be
-preserved to make the tokens easily understandable as from the same category.
-
-
-## UNUSED IDEAS
-
-### Central Markets
-
-The market contains resources laid out in a grid:
-
-Deck | Tier | Resources
----- | ---- | ---------
-     | T3   |
-     | T2   |
-     | T1   |
-
-You can trade 1:1 for any resource in the same tier, and 2:1 for any resource
-in the tier above (of 1:2 for a lower tier resource).  The ratio is 4:1 for
-T1:T3 resources.  If there are **no copies** of a resource you are giving into
-the market, it counts for double its value.  Also, if you are taking the
-**last** resource from a market row, it also counts for double it's value.
-
-All instances of the same resource in a row get stacked up on top of each
-other.  
-
-At the end of each round of play, for each row, one resource from the largest
-stack is trashed, and a new random resource from each deck is revealed and
-added.
-
-### Winning
-
-Winners are determined by whoever has the most valuable harvest at the end of
-the last round of the game.  
-
+The game ends when the first player uses all the token in their bowl - they are
+declared the winner!
