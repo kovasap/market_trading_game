@@ -2,7 +2,18 @@
 
 See `design.md` for rules/description.
 
-## Development
+## Cardmaker Development
+
+This game uses [Cardmaker
+v.1.1.0.0](https://github.com/nhmkdev/cardmaker/releases/tag/v.1.1.0.0) to
+generate cards.  In order to automatically generate cards from the csv files in
+the repo, you can run the `generate_decks.bash` script from the root of this
+repo.  In order for this to work, you must have downloaded the linked Cardmaker
+version and extracted it to `cardmaker/` in the root of this repo.  You will
+also need to install mono via something like `sudo apt-get install
+mono-complete`.
+
+## Tabletop Simulator Development
 
 While Tabletop Simulator game is running, in Atom, run "Get Lua Scripts" with
 the Tabletop Simulator plugin to get script for TTS save file.  Then replace
