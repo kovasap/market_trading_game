@@ -3,7 +3,7 @@ count ,abbrev ,name      ,tier ,points ,effects
 1     ,S      ,Stone     ,T1   ,1      ,        
 1     ,G      ,Grain     ,T1   ,1      ,        
 1     ,W      ,Wood      ,T1   ,1      ,        
-1     ,S      ,Salt      ,T1   ,2      ,        
+1     ,Sa     ,Salt      ,T1   ,2      ,        
 1     ,Br     ,Bread     ,T2   ,3      ,        
 1     ,Fi     ,Fillet    ,T2   ,3      ,        
 1     ,Ge     ,Gems      ,T2   ,3      ,        

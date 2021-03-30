@@ -60,9 +60,9 @@ Trading follows these rules:
 
 1. The total point number of resources you take in a trade must be less than or
    equal to the total point number of resources you give.
-1. If **zero** of a resource is in the market, its value is **doubled**.  This
-   applied when giving the first resource to the market and taking the last
-   resource.
+1. If **zero** of a resource is in the market, its value is its existing value
+   plus one.  This applied when giving the first resource to the market and
+   taking the last resource.
 1. A resource can only ever have up to **four** copies in the market.  If there
    exist four copies, the market is **flooded** and cannot accept any more.
 
