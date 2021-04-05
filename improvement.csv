@@ -8,10 +8,10 @@ count ,name        ,bonus_points ,location     ,production                      
 2     ,Refinery    ,0            ,Field or Mtn ,1 W + 1 S -> 1 Me                         ,Reshuffle improvements before Build                       ,3 S               
 2     ,Forge       ,0            ,Field or Mtn ,1 Me -> 1 Ir or 1 Me -> 1 Sc              ,Can move one improvement on Build                         ,4 S               
 2     ,Monastery   ,0            ,Mtn          ,2 G/F -> 1 Bo                             ,Can plant G anywhere                                      ,4 S               
-4     ,Flea Market ,0            ,Anywhere     ,1 Any -> 1 Any (same tier from bank)      ,                                                          ,2 W               
+3     ,Flea Market ,0            ,Anywhere     ,1 Any -> 1 Any (same tier from bank)      ,                                                          ,2 W               
 2     ,Monument    ,20           ,Field or Mtn ,                                          ,                                                          ,6 S + 3 Sc + 1 Me 
 3     ,Fishery     ,0            ,Field        ,                                          ,Plant 2 F in adj Water on Forage                          ,2 W               
 2     ,Manufactory ,0            ,Field        ,2 W -> 1 Fu or 2 S -> 1 Sc                ,Build an additional improvement on Build                  ,2 Me              
 3     ,Laboratory  ,0            ,Field        ,2 S + 1 Ge -> 1 Bo                        ,Plant 1 T1 Resource anywhere on Forage                    ,2 W               
-3     ,Goldsmith   ,0            ,Field        ,1 Ge -> 1 Je or 1 Pe -> 1 Je              ,Plant 1 Ge in Desert on Forage                            ,2 W               
-3     ,Fish Pools  ,0            ,Field        ,1 S -> 1 F                                ,Can plant F anywhere                                      ,2 S               
+2     ,Goldsmith   ,0            ,Field        ,1 Ge -> 1 Je or 1 Pe -> 1 Je              ,Plant 1 Ge in Desert on Forage                            ,2 W               
+2     ,Fish Pools  ,0            ,Field        ,1 S -> 1 F                                ,Can plant F anywhere                                      ,2 S               
