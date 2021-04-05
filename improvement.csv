@@ -1,17 +1,22 @@
-count ,name        ,bonus_points ,location     ,production                                ,effect                                                    ,build_cost        
-3     ,Farmhouse   ,0            ,Field        ,2 G -> 1 Br                               ,Plant 2 G in adj Field on Forage                          ,1 W               
-3     ,Mineshaft   ,0            ,Mtn          ,1 S -> 1 Sa                               ,Plant 2 S in adj Mtn on Forage                            ,1 W               
-3     ,Log Cabin   ,0            ,Forest       ,4 W -> 1 Fu                               ,Plant 2 W in adj Forest on Forage                         ,1 W               
-3     ,Warehouse   ,0            ,Anywhere     ,                                          ,Store extra resources here to harvest one at a time later ,1 W               
-2     ,Kitchen     ,0            ,Field        ,1 F -> 1 Fi or 1 Br + 1 Sa + 1 Fi -> 1 Fe ,                                                          ,1 W               
-2     ,Bakery      ,0            ,Field        ,1 G -> 1 Br                               ,                                                          ,2 S               
-2     ,Refinery    ,0            ,Field or Mtn ,1 W + 1 S -> 1 Me                         ,Reshuffle improvements before Build                       ,3 S               
-2     ,Forge       ,0            ,Field or Mtn ,1 Me -> 1 Ir or 1 Me -> 1 Sc              ,Can move one improvement on Build                         ,4 S               
-2     ,Monastery   ,0            ,Mtn          ,2 G/F -> 1 Bo                             ,Can plant G anywhere                                      ,4 S               
-3     ,Flea Market ,0            ,Anywhere     ,1 Any -> 1 Any (same tier from bank)      ,                                                          ,2 W               
-2     ,Monument    ,20           ,Field or Mtn ,                                          ,                                                          ,6 S + 3 Sc + 1 Me 
-3     ,Fishery     ,0            ,Field        ,                                          ,Plant 2 F in adj Water on Forage                          ,2 W               
-2     ,Manufactory ,0            ,Field        ,2 W -> 1 Fu or 2 S -> 1 Sc                ,Build an additional improvement on Build                  ,2 Me              
-3     ,Laboratory  ,0            ,Field        ,2 S + 1 Ge -> 1 Bo                        ,Plant 1 T1 Resource anywhere on Forage                    ,2 W               
-2     ,Goldsmith   ,0            ,Field        ,1 Ge -> 1 Je or 1 Pe -> 1 Je              ,Plant 1 Ge in Desert on Forage                            ,2 W               
-2     ,Fish Pools  ,0            ,Field        ,1 S -> 1 F                                ,Can plant F anywhere                                      ,2 S               
+count ,name        ,bonus_points ,location     ,production                                ,effect                                                      ,build_cost        
+3     ,Farmhouse   ,0            ,Field        ,2 G -> 1 Br                               ,On Forage; plant 2 G in adj Field                           ,1 W               
+3     ,Mineshaft   ,0            ,Mtn          ,1 S -> 1 Sa                               ,On Forage; plant 2 S in adj Mtn                             ,1 W               
+3     ,Log Cabin   ,0            ,Forest       ,4 W -> 1 Fu                               ,On Forage; plant 2 W in adj Forest                          ,1 W               
+3     ,Warehouse   ,0            ,Anywhere     ,                                          ,Store extra resources here to harvest one at a time later   ,1 W               
+2     ,Crossroads  ,0            ,Anywhere     ,                                          ,Adj improvements do their effect twice                      ,1 W               
+2     ,Kitchen     ,0            ,Field        ,1 F -> 1 Fi or 1 Br + 1 Sa + 1 Fi -> 1 Fe ,                                                            ,1 W               
+2     ,Bakery      ,0            ,Field        ,1 G -> 1 Br                               ,                                                            ,2 S               
+2     ,Refinery    ,0            ,Field or Mtn ,1 W + 1 S -> 1 Me                         ,Before Build; reshuffle improvements                        ,3 S               
+2     ,Forge       ,0            ,Field or Mtn ,1 Me -> 1 Ir or 1 Me -> 1 Sc              ,On Build; move one improvement                              ,4 S               
+2     ,Monastery   ,0            ,Mtn          ,2 G/F -> 1 Bo                             ,Duplicate 1 harvested resource                              ,4 S               
+3     ,Flea Market ,0            ,Anywhere     ,1 Any -> 1 Any (same tier from bank)      ,                                                            ,2 W               
+2     ,Monument    ,20           ,Field or Mtn ,                                          ,                                                            ,6 S + 3 Sc + 1 Me 
+3     ,Fishery     ,0            ,Field        ,                                          ,On Forage; plant 2 F in adj Water                           ,2 W               
+2     ,Manufactory ,0            ,Field        ,2 W -> 1 Fu or 2 S -> 1 Sc                ,On Build; build an additional improvement                   ,2 Me              
+3     ,Laboratory  ,0            ,Field        ,2 S + 1 Ge -> 1 Bo                        ,On Forage; plant 1 T1 Resource anywhere                     ,2 W               
+2     ,Goldsmith   ,0            ,Field        ,1 Ge -> 1 Je or 1 Pe -> 1 Je              ,On Forage; plant 1 Ge in Desert                             ,2 W               
+2     ,Fish Pools  ,0            ,Field        ,1 S -> 1 F                                ,On Forage; plant F on twice the tiles. Can plant F anywhere ,2 S               
+2     ,Greenhouse  ,0            ,Field        ,1 G -> 1 F                                ,On Forage; plant G on twice the tiles. Can plant G anywhere ,1 W + 1 S         
+2     ,Compost     ,0            ,Forest       ,1 F -> 1 G                                ,Plant twice as much G on each tile                          ,2 S               
+2     ,Algae Farm  ,0            ,Water        ,1 W -> 1 F                                ,Plant twice as much F on each tile                          ,2 S               
+2     ,Railway     ,0            ,Mtn          ,1 Me -> 4 S                               ,Plant twice as much S on each tile                          ,2 S               

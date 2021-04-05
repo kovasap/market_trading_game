@@ -35,9 +35,6 @@ F = field
 W = water
 ```
 
-Then all players select one "governor" card as their starting person and place
-it on a tile on their board.
-
 All players also take a point token bowl containing 30 tokens that they will
 empty over the course of the game.  The player who empties their bowl first
 wins!
@@ -45,11 +42,11 @@ wins!
 
 ## On your turn...
 
-### 1. Harvest Phase
+### 1. Harvest
 
 Remove one resource from each pile on your board and put it to the side.
 
-### 2. Trading and Processing Phase
+### 2. Trade and/or improve
 
 Using the resources you harvested, either convert them to new resources using
 each of your improvements at least once, or trade them to the central market.
@@ -66,26 +63,30 @@ Trading follows these rules:
 1. A resource can only ever have up to **four** copies in the market.  If there
    exist four copies, the market is **flooded** and cannot accept any more.
 
-### 3. Action Phase
+### 3. Build or Forage
 
-Each player has one or more "people" cards (you start with the Governor card).
-These people have three action types on them like so:
+Choose to EITHER:
 
-Name    |
-------- |
-Forage  |
-Build   |
-Upgrade |
+**Build** an improvement from the laid out set, replacing the improvements that
+you take.  Then take any "On Build" actions on your existing improvements (but
+not the one you just built).
 
-You declare which action you will take and do what each card says under that
-action type.  When taking an action, you MUST do every effect from every people
-card that you have, but you can do them in any order.
+**Forage** by placing two of any T1 resource on the same tile.  The resources
+must correspond to the tile:
 
-When actions tell you to buy improvements or people, you pay the cost to the
-bank (not the market!) and place your new person or improvement onto your map,
-taking up a tile.
+ - Wood goes on Forests
+ - Grain goes on Fields
+ - Stone goes on Mountains
+ - Fish go on Water
+ - Salt goes on Desert
 
-### 4. Donation Phase
+Then take any "On Forage" actions on your existing improvements.
+
+### 4. Trade and/or improve again
+
+If desired.  You can use any new improvements to improve here.
+
+### 5. Donation
 
 Any resources you did not use during your turn are given to the central
 market.  In exchange, you take tokens from your point bowl and place them next
@@ -96,6 +97,9 @@ no grain in the market currently.  Since grain is worth one point, you would
 earn `2 * 1 = 2` points for the first grain (since its value is doubled), and
 one point for the second, for three total points.  You would represent this by
 taking three of your point tokens and placing them by the grain market.
+
+Any resources that would go into a flooded market are simply given to the bank
+instead, and you get no points for them.
 
 
 ## Game End
