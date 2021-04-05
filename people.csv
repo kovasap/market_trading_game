@@ -1,11 +1,11 @@
-count ,cost         ,name      ,forage                                               ,build                                   ,upgrade                                                 
-4     ,Start        ,Governor  ,Plant 2 T1 Resources                                 ,Build 1 improvement                     ,Recruit 1 new person                                    
-2     ,1 Grain      ,Farmer    ,Plant 4 Grain                                        ,Cook: turn 2 Grain into 1 Br            ,Harvest ALL grain from a Plains                         
-2     ,1 Fish       ,Forager   ,Double the T1 resource placed on each tile this turn ,Cook: turn 2 Fish into 1 Fi             ,Plant 1 Jewel in a Forest with no adjacent developments 
-2     ,1Sa + 1 F    ,Chef      ,Plant 2 Grain                                        ,Cook: 1 Fi + 1 Br -> 1 Fe               ,Cook: 1 Fi + 1 S -> 1 Fe                                
-2     ,1G + 1F      ,Jeweler   ,Plant Jewel instead of Stone this turn               ,Refine: turn 4 Stone into 1 Jewel       ,----                                                    
-2     ,1W + 1G      ,Woodsman  ,Plant 2 Wood anywhere 1                              ,Refresh face up improvements.           ,Turn up to 3 Grain into Wood                            
-2     ,1S + 1G      ,Miner     ,Plant 2 Stone on two Mtns                            ,Pay one Stone!                          ,----                                                    
-2     ,1W + 1G + 1F ,Carpenter ,Draw 3 improvements and build 1 - discard others     ,Build 1 improvement                     ,Plant 2 Wood                                            
-2     ,3F           ,Architect ,Draw 5 improvements and build 1 - discard others     ,Build 1 Stone improvement for half cost ,Build 2 improvements                                    
-2     ,1G+1F        ,Trader    ,Trade 2:2 for same tier resource from the bank       ,Trade 2:1 resouces up a tier from bank  ,Refresh the face up cards from the people deck.         
+count ,cost         ,name      ,forage                                               ,build                                   ,upgrade                                               
+4     ,Start        ,Governor  ,Plant 2 T1 Resources                                 ,Build 1 improvement                     ,Recruit 1 new person                                  
+2     ,1 Grain      ,Farmer    ,Plant 4 Grain                                        ,Cook: turn 2 Grain into 1 Br            ,Harvest ALL grain from a Plains                       
+2     ,1 Fish       ,Forager   ,Double the T1 resource placed on each tile this turn ,Cook: turn 2 Fish into 1 Fi             ,Plant 1 Gem in a Forest with no adjacent developments 
+2     ,1Sa + 1 F    ,Chef      ,Plant 2 Grain                                        ,Cook: 1 Fi + 1 Br -> 1 Fe               ,Cook: 1 Fi + 1 S -> 1 Fe                              
+2     ,1G + 1F      ,Jeweler   ,Plant Jewel instead of Stone this turn               ,Refine: turn 4 Stone into 1 Jewel       ,----                                                  
+2     ,1W + 1G      ,Woodsman  ,Plant 2 Wood anywhere                                ,Refresh face up improvements.           ,Turn up to 3 Grain into Wood                          
+2     ,1S + 1G      ,Miner     ,Plant 2 Stone on two Mtns                            ,                                        ,----                                                  
+2     ,1W + 1G + 1F ,Carpenter ,Draw 3 improvements and build 1 - discard others     ,Build 1 improvement                     ,Plant 2 Wood                                          
+2     ,3F           ,Architect ,Draw 5 improvements and build 1 - discard others     ,Build 1 Stone improvement for half cost ,Build 2 improvements                                  
+2     ,1G+1F        ,Trader    ,Trade 2:2 for same tier resource from the bank       ,Trade 2:1 resouces up a tier from bank  ,Refresh the face up cards from the people deck.       
