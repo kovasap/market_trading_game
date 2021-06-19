@@ -59,7 +59,8 @@ Trading follows these rules:
    equal to the total point number of resources you give.
 1. If **zero** of a resource is in the market, its value is its existing value
    plus one.  This applied when giving the first resource to the market and
-   taking the last resource.
+   taking the last resource.  This is kinda too confusing, maybe should be
+   removed.
 1. A resource can only ever have up to **four** copies in the market.  If there
    exist four copies, the market is **flooded** and cannot accept any more.
 
@@ -81,6 +82,9 @@ must correspond to the tile:
  - Salt goes on Desert
 
 Then take any "On Forage" actions on your existing improvements.
+
+ALTERNATIVE: Could also forage every turn and build as many improvements as you
+have resources for to speed up the game.
 
 ### 4. Trade and/or improve again
 
