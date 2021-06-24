@@ -1,8 +1,3 @@
----
-bookShowToc: false
-draft: true
----
-
 # Market Trading
 
 ## Core ideas and inspirations
@@ -17,9 +12,9 @@ complementary resources.
 
 ## Setting up
 
-The improvements and people decks are shuffled, and 6 and 4 cards respectively
-are flipped up next to them as options for players to buy as the game
-progresses.  These cards are refreshed as they are bought.
+The improvements deck is shuffled, and 10 cards are flipped up next to them as
+options for players to buy as the game progresses.  These cards are refreshed
+as they are bought.
 
 Then each player takes an agricola-style random game board with a grid of
 different terrain types.  For example:
@@ -57,20 +52,20 @@ Trading follows these rules:
 
 1. The total point number of resources you take in a trade must be less than or
    equal to the total point number of resources you give.
-1. If **zero** of a resource is in the market, its value is its existing value
-   plus one.  This applied when giving the first resource to the market and
-   taking the last resource.  This is kinda too confusing, maybe should be
-   removed.
 1. A resource can only ever have up to **four** copies in the market.  If there
    exist four copies, the market is **flooded** and cannot accept any more.
 
-### 3. Build or Forage
+### 3. Build
 
-Choose to EITHER:
+**Build** a single improvement from the laid out set if you can afford it,
+replacing the improvements that you take.  Then take any "On Build" actions on
+your existing improvements (but not the one you just built).
 
-**Build** an improvement from the laid out set, replacing the improvements that
-you take.  Then take any "On Build" actions on your existing improvements (but
-not the one you just built).
+### 4. Trade and/or improve again
+
+If desired.  You can use any new improvements to improve here.
+
+### 5. Forage
 
 **Forage** by placing two of any T1 resource on the same tile.  The resources
 must correspond to the tile:
@@ -83,24 +78,19 @@ must correspond to the tile:
 
 Then take any "On Forage" actions on your existing improvements.
 
-ALTERNATIVE: Could also forage every turn and build as many improvements as you
-have resources for to speed up the game.
+### 6. Donation
 
-### 4. Trade and/or improve again
-
-If desired.  You can use any new improvements to improve here.
-
-### 5. Donation
-
-Any resources you did not use during your turn are given to the central
-market.  In exchange, you take tokens from your point bowl and place them next
-to the resources in question according to the market value of those resources.
+Any resources you did not use during your turn are given to the central market.
+In exchange, you take tokens from your point bowl and place them next to the
+resources in question according to the market value of those resources.  If
+there are no resources of the given type in the market, you get the large
+number in points in parenthesis on the resource token.
 
 For example, say you have two extra grain at the end of your turn, and there is
-no grain in the market currently.  Since grain is worth one point, you would
-earn `2 * 1 = 2` points for the first grain (since its value is doubled), and
-one point for the second, for three total points.  You would represent this by
-taking three of your point tokens and placing them by the grain market.
+no grain in the market currently.  Since grain is worth one point normally and
+two points for the first grain, you would earn 2 + 1 = 3 total points.  You
+would represent this by taking three of your point tokens and placing them by
+the grain market.
 
 Any resources that would go into a flooded market are simply given to the bank
 instead, and you get no points for them.
