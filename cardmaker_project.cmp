@@ -3,7 +3,7 @@
   <Layout combineReferences="false" width="50" height="50" buffer="0" Name="resource" defaultCount="1" dpi="100" drawBorder="true">
     <Element name="name" type="Text" x="5" y="35" width="40" height="10" variable="@[name]" font="FreeMono;6;1;0;0;0" elementcolor="0x691111FF" bordercolor="0x000000FF" backgroundcolor="0x00000000" borderthickness="0" rotation="0" horizontalalign="1" verticalalign="0" lineheight="14" wordspace="0" opacity="255" enabled="true" outlinecolor="0x000000FF" outlinethickness="0" justifiedtext="false" autoscalefont="false" lockaspect="false" keeporiginalsize="false" tilesize="" />
     <Element name="tier" type="Text" x="33" y="28" width="13" height="7" variable="@[tier]" font="Arial;7;0;0;0;0" elementcolor="0x000000FF" bordercolor="0x000000FF" backgroundcolor="0x00000000" borderthickness="0" rotation="0" horizontalalign="1" verticalalign="1" lineheight="14" wordspace="0" opacity="255" enabled="true" outlinecolor="0x000000FF" outlinethickness="0" justifiedtext="false" autoscalefont="false" lockaspect="false" keeporiginalsize="false" tilesize="" />
-    <Element name="points" type="Text" x="4" y="28" width="9" height="8" variable="@[points]" font="Arial;7;0;0;0;0" elementcolor="0x000000FF" bordercolor="0x000000FF" backgroundcolor="0x00000000" borderthickness="0" rotation="0" horizontalalign="1" verticalalign="1" lineheight="14" wordspace="0" opacity="255" enabled="true" outlinecolor="0x000000FF" outlinethickness="0" justifiedtext="false" autoscalefont="false" lockaspect="false" keeporiginalsize="false" tilesize="" />
+    <Element name="points" type="Text" x="4" y="28" width="23" height="8" variable="@[points]" font="Arial;6;0;0;0;0" elementcolor="0x000000FF" bordercolor="0x000000FF" backgroundcolor="0x00000000" borderthickness="0" rotation="0" horizontalalign="1" verticalalign="1" lineheight="14" wordspace="0" opacity="255" enabled="true" outlinecolor="0x000000FF" outlinethickness="0" justifiedtext="false" autoscalefont="false" lockaspect="false" keeporiginalsize="false" tilesize="" />
     <Element name="effects" type="Text" x="26" y="129" width="139" height="53" variable="@[effects]" font="Arial;12;0;0;0;0" elementcolor="0x000000FF" bordercolor="0x000000FF" backgroundcolor="0x00000000" borderthickness="0" rotation="0" horizontalalign="0" verticalalign="0" lineheight="14" wordspace="0" opacity="255" enabled="true" outlinecolor="0x000000FF" outlinethickness="0" justifiedtext="false" autoscalefont="false" lockaspect="false" keeporiginalsize="false" tilesize="" />
     <Element name="abbrev" type="Text" x="5" y="5" width="40" height="30" variable="@[abbrev]" font="Arial;18;0;0;0;0" elementcolor="0x000000FF" bordercolor="0x000000FF" backgroundcolor="0x00000000" borderthickness="0" rotation="0" horizontalalign="1" verticalalign="0" lineheight="14" wordspace="0" opacity="255" enabled="true" outlinecolor="0x000000FF" outlinethickness="0" justifiedtext="false" autoscalefont="false" lockaspect="false" keeporiginalsize="false" tilesize="" />
     <Reference RelativePath="resource.csv" Default="true" />
@@ -13,6 +13,8 @@
     <exportWidth>0</exportWidth>
     <exportHeight>0</exportHeight>
     <zoom>1.13</zoom>
+    <exportLayoutBorder>false</exportLayoutBorder>
+    <exportLayoutBorderCrossSize>0</exportLayoutBorderCrossSize>
   </Layout>
   <Layout combineReferences="false" width="200" height="200" buffer="0" Name="improvement" defaultCount="1" dpi="100" drawBorder="true">
     <Element name="name" type="Text" x="69" y="15" width="85" height="46" variable="@[name]" font="Arial;12;0;0;0;0" elementcolor="0x000000FF" bordercolor="0x000000FF" backgroundcolor="0x00000000" borderthickness="0" rotation="0" horizontalalign="0" verticalalign="0" lineheight="14" wordspace="0" opacity="255" enabled="true" outlinecolor="0x000000FF" outlinethickness="0" justifiedtext="false" autoscalefont="false" lockaspect="false" keeporiginalsize="false" tilesize="" />
@@ -28,6 +30,8 @@
     <exportWidth>0</exportWidth>
     <exportHeight>0</exportHeight>
     <zoom>1.13</zoom>
+    <exportLayoutBorder>false</exportLayoutBorder>
+    <exportLayoutBorderCrossSize>0</exportLayoutBorderCrossSize>
   </Layout>
   <Layout combineReferences="false" width="300" height="400" buffer="0" Name="people" defaultCount="1" dpi="300" drawBorder="true">
     <Element name="name" type="Text" x="10" y="14" width="183" height="65" variable="@[name]" font="Arial;24;0;0;0;0" elementcolor="0x000000FF" bordercolor="0x000000FF" backgroundcolor="0x00000000" borderthickness="0" rotation="0" horizontalalign="1" verticalalign="1" lineheight="14" wordspace="0" opacity="255" enabled="true" outlinecolor="0x000000FF" outlinethickness="0" justifiedtext="false" autoscalefont="false" lockaspect="false" keeporiginalsize="false" tilesize="" />
@@ -42,6 +46,8 @@
     <exportWidth>0</exportWidth>
     <exportHeight>0</exportHeight>
     <zoom>1</zoom>
+    <exportLayoutBorder>false</exportLayoutBorder>
+    <exportLayoutBorderCrossSize>0</exportLayoutBorderCrossSize>
   </Layout>
   <Layout combineReferences="false" width="300" height="400" buffer="0" Name="project" defaultCount="1" dpi="300" drawBorder="true">
     <Element name="name" type="Text" x="45" y="14" width="213" height="65" variable="@[name]" font="Arial;24;0;0;0;0" elementcolor="0x000000FF" bordercolor="0x000000FF" backgroundcolor="0x00000000" borderthickness="0" rotation="0" horizontalalign="1" verticalalign="1" lineheight="14" wordspace="0" opacity="255" enabled="true" outlinecolor="0x000000FF" outlinethickness="0" justifiedtext="false" autoscalefont="false" lockaspect="false" keeporiginalsize="false" tilesize="" />
@@ -55,6 +61,8 @@
     <exportWidth>0</exportWidth>
     <exportHeight>0</exportHeight>
     <zoom>1</zoom>
+    <exportLayoutBorder>false</exportLayoutBorder>
+    <exportLayoutBorderCrossSize>0</exportLayoutBorderCrossSize>
   </Layout>
   <translatorName>Incept</translatorName>
   <lastExportPath>/home/kovas/market-trading-game/card_images</lastExportPath>
