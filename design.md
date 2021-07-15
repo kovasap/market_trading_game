@@ -55,6 +55,10 @@ Trading follows these rules:
 1. A resource can only ever have up to **four** copies in the market.  If there
    exist four copies, the market is **flooded** and cannot accept any more.
 
+When improving a resource, put the resources to be improved into the bank, then
+place the resource that is created onto the improvement to be harvested on the
+next turn.
+
 ### 3. Build
 
 **Build** a single improvement from the laid out set if you can afford it,
@@ -84,7 +88,9 @@ Any resources you did not use during your turn are given to the central market.
 In exchange, you take tokens from your point bowl and place them next to the
 resources in question according to the market value of those resources.  If
 there are no resources of the given type in the market, you get the large
-number in points in parenthesis on the resource token.
+number in points in parenthesis on the resource token.  Alternatively, if no
+tiles have ever been placed in that area for points (no player point tiles are
+next to the resource), only then do you get the bonus points.
 
 For example, say you have two extra grain at the end of your turn, and there is
 no grain in the market currently.  Since grain is worth one point normally and
@@ -94,6 +100,12 @@ the grain market.
 
 Any resources that would go into a flooded market are simply given to the bank
 instead, and you get no points for them.
+
+
+## Improvement Cycling
+
+At the end of a round of play, two cards are removed and replaced to better
+cycle through the improvements deck.
 
 
 ## Game End

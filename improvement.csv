@@ -6,15 +6,16 @@ count ,name        ,bonus_points ,location     ,production                      
 2     ,Crossroads  ,0            ,Anywhere     ,                                           ,Adj improvements do their effect twice                      ,1 W               
 2     ,Kitchen     ,0            ,Field        ,1 F -> 1 Fi or 1 Br + 1 Sa + 1 Fi -> 1 Fe  ,                                                            ,1 W               
 2     ,Bakery      ,0            ,Field        ,1 G -> 1 Br  or 1 Br + 1 Sa + 1 Fi -> 1 Fe ,                                                            ,2 S               
-2     ,Refinery    ,0            ,Field or Mtn ,1 W + 1 S -> 1 Me                          ,Before Build; reshuffle any improvements                    ,3 S               
+4     ,Refinery    ,0            ,Field or Mtn ,1 W + 1 S -> 1 Me                          ,Before Build; reshuffle any improvements                    ,3 S               
 2     ,Forge       ,0            ,Field or Mtn ,1 Me -> 1 Ir or 1 Me -> 1 Sc               ,On Build; move one improvement                              ,4 S               
 2     ,Monastery   ,0            ,Mtn          ,2 G/F -> 1 Bo                              ,Duplicate 1 harvested resource                              ,4 S               
-3     ,Flea Market ,0            ,Anywhere     ,1 Any -> 1 Any (same tier from bank)       ,                                                            ,2 W               
+3     ,Flea Market ,0            ,Anywhere     ,1 Any -> 1 Any (same tier from bank)       ,Can only be used twice a turn                               ,2 W               
 2     ,Monument    ,20           ,Field or Mtn ,                                           ,                                                            ,6 S + 3 Sc + 1 Me 
 3     ,Fishery     ,0            ,Field        ,                                           ,On Forage; plant 2 F in adj Water                           ,2 W               
 2     ,Manufactory ,0            ,Field        ,2 W -> 1 Fu or 2 S -> 1 Sc                 ,On Build; build an additional improvement                   ,2 Me              
 3     ,Laboratory  ,0            ,Field        ,2 S + 1 Ge -> 1 Bo                         ,On Forage; plant 1 T1 Resource anywhere                     ,2 W               
-2     ,Goldsmith   ,0            ,Field        ,1 Ge -> 1 Je or 1 Pe -> 1 Je               ,On Forage; plant 1 Ge in Desert                             ,2 W               
+2     ,Goldsmith   ,0            ,Field        ,1 Ge + 1 Pe + 1 Me -> 1 Je                 ,On Forage; plant 1 Ge in Desert                             ,2 W               
+4     ,Diver       ,0            ,Water        ,3 F -> 1 Pe                                ,On Forage; plant 1 Pe in Water                              ,2 W               
 2     ,Fish Pools  ,0            ,Field        ,1 S -> 1 F                                 ,On Forage; plant F on twice the tiles. Can plant F anywhere ,2 S               
 2     ,Greenhouse  ,0            ,Field        ,1 G -> 1 F                                 ,On Forage; plant G on twice the tiles. Can plant G anywhere ,1 W + 1 S         
 2     ,Compost     ,0            ,Forest       ,1 F -> 1 G                                 ,Plant twice as much G on each tile                          ,2 S               

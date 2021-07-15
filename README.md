@@ -23,3 +23,14 @@ those scripts with the ones in the tts-lua directory in this repo.  Then run
 ## Reference Links
 
  - https://chuzzydev.wordpress.com/2020/07/03/automated-card-drawing-in-tabletop-simulator/
+
+
+## TODOs
+
+ - Make different player boards with different terrain types to choose from at
+   the beginning of the game.
+ - Make the player boards smaller in general (about half as big) to make space
+   a more real concern.
+ - Remove resource tiers, or perhaps simplify them
+ - Color code the resources.
+ - Add emojis/icons to the resources instead of the two letter codes.
