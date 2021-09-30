@@ -2,6 +2,8 @@
 
 See `design.md` for rules/description.
 
+Can be played at https://steamcommunity.com/sharedfiles/filedetails/?id=2614847565.
+
 ## Cardmaker Development
 
 This game uses [Cardmaker
